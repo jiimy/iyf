@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <link rel="stylesheet" href="./css/normalize.css">
+  <link rel="stylesheet" href="./css/reset.css">
+  <link rel="stylesheet" href="./css/index.css">
+</head>
+
+<body>
+  <div id="iyf">
+    <!-- SignupPG1 -->
+    <div class="signupPG1">
+      <!-- SignupPG1 header Component -->
+      <header>
+        <div class="backward">뒤로 가기</div>
+        <span>Sign Up</span>
+        <div class="forward">앞으로 가기</div>
+      </header>
+      <!-- SignupPG1 checkboxs Component-->
+      <form class="checkboxs" action="" method="post">
+        <label for="AcceptAll" class="AcceptAll">
+            <input type="checkbox" id="AcceptAll">
+            <span class="bg"></span>
+            <span>Accept all</span>
+          </label>
+
+        <label for="Required1" class="Required1">
+            <input type="checkbox" id="Required1">
+            <span class="bg"></span>
+            <span>[Required] Terms of Service</span>
+          </label>
+
+        <label for="Required2" class="Required2">
+            <input type="checkbox" id="Required2">
+            <span class="bg"></span>
+            <span>
+              [Required] Privacy policy
+            </span>
+          </label>
+
+        <label for="Required3" class="Required3">
+            <input type="checkbox" id="Required3">
+            <span class="bg"></span>
+            <span>
+              [Required] Provide location information
+            </span>
+          </label>
+
+        <label for="Choice" class="Choice">
+            <input type="checkbox" id="Choice">
+            <span class="bg"></span>
+            <span>
+              [Choice] Receive event and promotional messages
+            </span>
+          </label>
+      </form>
+      <!-- SignupPG1 inputs Component -->
+      <form class="inputs" action="" method="post">
+        <span>
+          <input type="text" placeholder="Create ID">
+          <button type="button" ><span class="checkID">Check</span></button>
+        </span>
+        <input type="password" maxlength="13" placeholder="Create a password">
+        <input type="password" maxlength="13" placeholder="Confirm your password">
+        <span>
+          <input type="email" placeholder="Your email address">
+          <button type="button" class="Request">
+            <span>Request</span>
+            </button>
+        </span>
+        <input type="number" placeholder="Certification Number">
+      </form>
+      <!-- SignupPG1 Nextbtn Component-->
+      <button type="button" class="Nextbtn active">Next</button>
+    </div>
+  </div>
+</body>
+
+</html>

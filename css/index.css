@@ -1,0 +1,649 @@
+/* 폰트 여기서 먼저 불러오기 */
+@font-face {
+  font-family: 'TW';
+  font-weight: 200;
+  src: url(../font/TitilliumWeb-ExtraLight.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'TW';
+  font-weight: 400;
+  src: url(../font/TitilliumWeb-Regular.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'TW';
+  font-weight: 500;
+  src: url(../font/TitilliumWeb-SemiBold.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'TW';
+  font-weight: 600;
+  src: url(../font/TitilliumWeb-Bold.ttf) format('truetype');
+}
+
+/* 모든 페이지 컴포넌트에서 공통 */
+/* 기본적으로 360으로 맞추고 480이상부터 미디어쿼리 */
+#iyf{
+  max-width: 640px;
+  margin: 0 auto;
+}
+*{
+  font-family: TW;
+}
+/* loginPG */
+.loginPG{
+  background: url('../img/loginBg.svg');
+  background-repeat: no-repeat;
+  background-position-y: 19px;
+  padding: 0px 10.3% 6.3% 10.3%;
+  background-size: 82.4%;
+  background-position: top;
+  background-position-x: left;
+  background-position-y: 19px;
+}
+/* loginPG Logintitle Component */
+.loginPG h1{
+  color:#d34a9a;
+  font-size: 1.9rem;
+  font-family: 'TW';
+  font-weight: 200;
+  padding-top: 50%;
+  /* 1번째 방법 */
+  /* background: url('../img/loginTitle.svg');
+  background-repeat: no-repeat;
+  background-size: 73%;
+  height: 125px;
+  background-position: bottom;
+  background-position-x: 0; */
+}
+.loginPG h1 img{
+  width: 84%;
+}
+.loginPG h1 span{
+  display: block;
+  margin-bottom: 2%;
+}
+
+/* loginPG Login Component */
+.loginPG input{
+  width: 100%;
+  font-family: 'TW';
+  color: #4a4a4a;
+  font-weight: 800;
+  font-size: 1.2rem;
+  border: none;
+  border-bottom: 2px solid #e7e7e7;
+  background: transparent;
+  padding:2.7%;
+  margin-top: 22%;
+}
+.loginPG input[type="password"]{
+  margin:4% 0 7% 0;
+}
+/* loginPG Login Component */
+.loginPG button{
+  width: 100%;
+  border-radius: 12px;
+  padding: 4.3% 0 5.3% 0;
+  color: white;
+  font-size: 1.2rem;
+  font-family: 'TW';
+  font-weight: 800;
+}
+.loginPG button.Login{
+  background-color: #d34a9a;
+  margin-bottom: 4%;
+  box-shadow: 0 4px 10px 0 rgba(211,74,154,0.4);
+}
+.loginPG button.facebookLogin{
+  background-color: #2e609a;
+  margin-bottom: 7%;
+  box-shadow: 0 4px 10px 0 rgba(74, 144, 226, 0.56)
+}
+/* loginPG Loginsignup Component */
+.loginPG .signup{
+  font: 400 0.9rem TW;
+}
+.loginPG .signup p{
+  text-align: center;
+  margin-bottom: 22.5%;
+  color: #4a4a4a;
+}
+.loginPG .signup p span a{
+  color: #d34a9a;
+}
+.loginPG .signup:after{
+  display: block;
+  content: '';
+  clear: both;
+}
+.loginPG .signup .signup__forgot{
+  float: left;
+  margin-left: -20px;
+}
+.loginPG .signup .signup__help{
+  float: right;
+  margin-right:-20px;
+}
+
+/* signupPG1 header Component */
+.signupPG1 header{
+  text-align: center;
+  font:600 1.3rem TW;
+  padding: 4.7%;
+  border-bottom: 2px solid #a4a4a4;
+  position: relative;
+}
+.signupPG1 header .backward, header .forward{
+  text-indent: 100%;
+  overflow: hidden;
+  white-space: nowrap;
+  bottom: 9%;
+}
+.signupPG1 header .backward{
+  left: 5%;
+  background: url('../img/headBackward.svg') no-repeat;
+  background-size: 100%;
+  position: absolute;
+  width: 3%;
+  bottom: 15%;
+}
+.signupPG1 header .forward{
+  right: 4%;
+  background: url('../img/headForward.svg') no-repeat;
+  background-size: 100%;
+  position: absolute;
+  width: 5%;
+  bottom:13%;
+}
+
+/* signupPG1 .checkboxs Component */
+.signupPG1 .checkboxs{
+  padding:0 5%;
+  margin: 9% 0 0 0;
+}
+.signupPG1 .checkboxs label{
+  display: block;
+  color: #4a4a4a;
+  cursor: pointer;
+  font-size: 0.75rem;
+}
+.signupPG1 .checkboxs input{
+  display: none;
+}
+.signupPG1 .checkboxs span{
+  line-height: 2em;
+  vertical-align: top;
+  margin-left: 0.3rem;
+}
+.signupPG1 .checkboxs span.bg{
+  width: 2em;
+  height: 2em;
+  border-radius: 0.3em;
+  background: #eee;
+  display: inline-block;
+  margin-left: 0;
+}
+.signupPG1 .checkboxs input:checked~span.bg{
+  background: #d34a9a;
+  background-image: url('../img/signupChecked.svg');
+  background-size: 80% 80%;
+  border-radius: 0.3em;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 2em;
+  height: 2em;
+  margin-left: 0;
+}
+.signupPG1 .checkboxs input:checked~span{
+  font-weight: 600;
+
+}
+.signupPG1 .checkboxs .AcceptAll{
+  margin-bottom: 1rem;
+  margin-top: 0;
+}
+.signupPG1 .checkboxs label{
+  margin-bottom: 0.3em;
+}
+
+/* signupPG1 .inputs Component */
+.signupPG1 .inputs{
+  padding:0 5%;
+  margin: 1.5em 0 2em 0;
+}
+.signupPG1 .inputs span{
+  position: relative;
+  display: block;
+}
+.signupPG1 span button{
+  position: absolute;
+  top: 0.65em;
+  right: 0.3em;
+  background: none;
+}
+.signupPG1 span button span{
+  background: url('../img/signupBtnbg.svg') no-repeat center;
+  background-size: 100%;
+  color: #4a4a4a;
+  width: 5.8em;
+  font: 600 0.9em TW;
+  display:block;
+  height: 2.5em;
+  line-height: 2.5em;
+}
+.signupPG1 .inputs input{
+  padding: 0.85em 0.8em 0.85em 1.6em;
+  border: none;
+  background: #eee;
+  border-radius: 0.3em;
+  font:600 0.9em TW;
+  margin-top: 0.45em;
+  width: 100%;
+}
+.signupPG1 .inputs input::placeholder{
+  color: #9b9b9b;
+  font:400 0.9em TW;
+}
+.signupPG1 .inputs input.text{
+  margin-top: 0;
+}
+.signupPG1 .inputs input[type="password"]{
+  text-security:circle;
+}
+
+/* signupPG1 .Nextbtn Component */
+.signupPG1 .Nextbtn{
+  width: 100%;
+  background: #4a4a4a;
+  color: #fff;
+  font-family: 600;
+  font-size: 1.2em;
+  /* font: 600 1.2em TW; */
+  padding:1.05em 0;
+}
+.signupPG1 .Nextbtn.active{
+  background-color: #d34a9a;
+}
+
+
+/* signupPG2 header Component */
+.signupPG2 header{
+  text-align: center;
+  font:600 1.3rem TW;
+  padding: 0.9em;
+  border-bottom: 2px solid #a4a4a4;
+  position: relative;
+  color: #4a4a4a;
+}
+.signupPG2 header .backward, header .forward{
+  text-indent: 100%;
+  overflow: hidden;
+  white-space: nowrap;
+  bottom: 9%;
+}
+.signupPG2 header .backward{
+  left: 1em;
+  background: url('../img/headBackward.svg') no-repeat;
+  background-size: 100%;
+  position: absolute;
+  width: 0.55em;
+  bottom: 0.4em;
+}
+.signupPG2 header .forward{
+  right:1em;
+  background: url('../img/headForward.svg') no-repeat;
+  background-size: 100%;
+  position: absolute;
+  width: 0.9em;
+  bottom:0.3em;
+}
+ /* signupPG2 profileimg Component  */
+ .signupPG2 .profileimg{
+   position: relative;
+   height: 16.5em;
+ }
+ .signupPG2 .profileimg span{
+   position: absolute;
+ }
+.signupPG2 .profileimg span.profileimg__profile{
+  top:0;
+  bottom:0;
+  right: 0;
+  left:0;
+  margin: auto;
+  width: 10em;
+  height: 10em;
+}
+.signupPG2 .profileimg span.profileimg__camera{
+  width: 2.6em;
+  /* right: 6em; */
+  right: 27vw;
+  bottom: 3em;
+}
+
+/* signupPG2 .personalData Component */
+.signupPG2 .personalData{
+  padding:0 5%;
+}
+.signupPG2 .personalData span{
+  position: relative;
+  display: block;
+}
+.signupPG2 .personalData span button{
+  position: absolute;
+  top: 0.25em;
+  right: 0.25em;
+  background: none;
+}
+.signupPG2 .personalData input{
+  /* padding: 0.85em 0.8em 0.85em 1.6em; */
+  /* font:400 0.9em TW; */
+  padding: 1.05em 0.8em 1.05em 1.6em;
+  font-size: 0.9em;
+  border: none;
+  background: #eee;
+  border-radius: 0.3em;
+  margin-bottom: 0.45em;
+  width: 100%;
+  color: #9b9b9b;
+}
+.signupPG2 .personalData button span{
+  background: url('../img/signupBtnbg.svg') no-repeat center;
+  background-size: 100%;
+  color: #4a4a4a;
+  width: 5.8em;
+  font: 600 0.9em TW;
+  display:block;
+  height: 2.6em;
+  line-height: 2.7em;
+}
+.signupPG2 .personalData input::placeholder{
+  font-size: 0.9em;
+  color: #9b9b9b;
+}
+.signupPG2 .personalData .select{
+  width: 100%;
+  background: #eee;
+  margin-bottom: 0.45em;
+  position: relative;
+}
+
+.signupPG2 .personalData .select select{
+  padding:0.85em 0.8em 0.85em 1.6em;
+  background: transparent;
+  border: none;
+  width: 100%;
+  font: 600 0.8em TW;
+  color: #4a4a4a;
+}
+.signupPG2 .personalData .select select + span{
+  position: absolute;
+  right: 0;
+  top: 0.4em;
+  padding-right: 0.5em;
+  background: #eee;
+  background-image: url('../img/selectDrop.svg');
+  background-repeat:no-repeat;
+  background-position: left;
+  background-size: 60%;
+  width: 1.4em;
+  height: 1.9em;
+}
+.signupPG2 .personalData .etcBtn{
+  margin-bottom: 2.2em;
+}
+.signupPG2 .personalData .etcBtn:after{
+  display: block;
+  content: '';
+  clear: both;
+}
+.signupPG2 .personalData .etcBtn button{
+  width: 32.1%;
+  padding:0.75em 0.4em 0.75em 0.4em;
+  background: #eee;
+  color: #4a4a4a;
+  border-radius: 0.3em;
+  font: 600 0.9em TW;
+}
+.signupPG2 .personalData .etcBtn button.Female{
+  float: left;
+}
+.signupPG2 .personalData .etcBtn button.Male{
+  margin-left: 0.4em;
+}
+.signupPG2 .personalData .etcBtn button.Rather{
+  float: right;
+}
+@media screen and (max-width:354px) {
+  .signupPG2 .personalData .etcBtn button.Rather{
+    font: 600 0.8em TW;
+    padding:0.9em 0.4em 0.9em 0.4em;
+  }
+
+}
+
+/* signupPG2 .Nextbtn Component */
+.signupPG2 .Nextbtn{
+  width: 100%;
+  background: #4a4a4a;
+  color: #fff;
+  font: 600 1.2em TW;
+  padding:1.05em 0;
+}
+.signupPG2 .Nextbtn.active{
+  background-color: #d34a9a;
+}
+
+/* .homePG */
+/* .homePG .headerBar Component*/
+.homePG .headerBar{
+  background:url('../img/logo.svg') no-repeat left bottom;
+  background-color: #d34a9a;
+  height: 5.2em;
+  background-size: 35% 50%;
+  background-position-x:1.6em;
+  position: relative;
+}
+.homePG .headerBar .search{
+  background: url('../img/search.svg') no-repeat center;
+  position: absolute;
+  width: 1.3em;
+  height:1.3em;
+  display: inline-block;
+  bottom: 0.8em;
+  background-size: 100% 100%;
+  right: 4.6em;
+}
+.homePG .headerBar .hambuger{
+  background: url('../img/hambuger.svg') no-repeat center;
+  position: absolute;
+  width: 1.4em;
+  height:1.2em;
+  display: inline-block;
+  bottom: 0.8em;
+  background-size: 100% 100%;
+  right: 1.7em;
+}
+/* .homePG .profile Component */
+.homePG .profile{
+  position: relative;
+  height: 7.5em;
+  background-color: rgba(228, 228, 228, 0.3);
+}
+.homePG .profile .blah{
+  position: absolute;
+  display: block;
+  top: 0;
+  left:2em;
+  bottom: 0;
+  margin: auto;
+  height: 2em;
+  color: #4a4a4a;
+}
+.homePG .profile .blah .blah__blah{
+  display: block;
+  font: 200 2.1em TW;
+  margin: -0.6em 0 -0.4em 0;
+}
+.homePG .profile .blah .blah__nickname{
+  font: 600 1.2em TW;
+}
+.homePG .profile .profile__img{
+  width: 4em;
+  position: absolute;
+  right: 2em;
+  bottom: 1.5em;
+}
+
+/* .homePG best Component */
+.homePG .best{
+  font: 500 0.9em TW;
+  color: #d34a9a;
+  border-bottom: 1px solid #e4e4e4;
+  background: url('../img/homePGbestplus.svg') no-repeat right;
+  background-size: 10% 33%;
+}
+.homePG .best span{
+  display: inline-block;
+  background: url('../img/homePGbestbg.svg') no-repeat center;
+  margin: 0.7em 0.3em 0.7em 1.5em;
+  color: white;
+  text-align: center;
+  width: 1.5em;
+  border-radius: 0.3em;
+  font:600 0.8em TW;
+  height: 1.5em;
+}
+
+/* 테스트용 contents 높이 */
+.homePG .contents{
+  height: 1000px;
+}
+
+/* .homePG contentsHeader Component */
+.homePG .contentsHeader{
+  padding:0.7em 0.3em 0.1em 1em;
+  background: url('../img/more_1.svg') no-repeat right;
+  background-size: 7%;
+  background-position-x: 89vw;
+}
+.homePG .contentsHeader img{
+  width: 2.4em;
+  margin-right: 0.3em;
+  vertical-align: super;
+}
+.homePG .contentsHeader>span{
+  display: inline-block;
+  vertical-align: top;
+  /* white-space: pre-line; */
+  margin-top: -0.1em;
+  font:400 0.8em Tw;
+  color: #4a4a4a;
+}
+.homePG .contentsHeader .contents__title{
+  display: block;
+  font: 600 1.3em TW;
+  margin-bottom: -0.5em;
+}
+/* .homePG contentsBody Component */
+.homePG .contentsBody{
+  border-bottom: 1px solid #e4e4e4;
+  padding-bottom: 1em;
+  margin-bottom: 0.6em;
+}
+.homePG .contentsBody p{
+  font: 400 0.85em TW;
+  color: #4a4a4a;
+  padding:1.5em 1.1em 0.4em 1.1em;
+  line-height: 1.5em;
+  text-align: left;
+}
+.homePG .contentsBody p+span{
+  color: #b5b5b5;
+  font-size: 0.9em;
+  padding:0em 0em 0.4em 1.1em;
+  line-height: 1.4em;
+  text-align: left;
+}
+
+/* .homePG .contentsFooter Component */
+.homePG .contentsFooter{
+  padding: 0 1.1em 0 1.1em;
+  font: 400 0.8em TW;
+  color: #4a4a4a;
+}
+.homePG .contentsFooter span{
+  padding-left: 1.8em;
+  margin-right: 2em;
+}
+.homePG .contentsFooter .like{
+  background: url('../img/like.svg') no-repeat center;
+  background-position-x: 0;
+  background-size: 28% 100%;
+}
+.homePG .contentsFooter .comments{
+  background: url('../img/comments.svg') no-repeat center;
+  background-position-x: 0;
+  background-size: 40% 100%;
+}
+.homePG .contentsFooter .share{
+  background: url('../img/share.svg') no-repeat center;
+  background-position-x: 0;
+  background-size: 28% 100%;
+  margin-right:0;
+}
+
+/* homePG .footer Component */
+.homePG .footer{
+  height: 4.5em;
+  min-width: 640px;
+  position: fixed;
+  bottom: 0;
+  background-color: rgba(255,255,255,0.93);
+  box-shadow: 0 -5px 4px 0 rgba(0, 0, 0, 0.1);
+}
+.homePG .footer:after{
+  display: block;
+  content: '';
+  clear: both;
+}
+.homePG .footer span{
+  float: left;
+  /* width: 2em; */
+  width: 16vw;
+  height: 2em;
+  display: inline-block;
+  /* margin: 0.8em 1em 0.8em 0.8em; */
+  margin: 1.2em 1vw 0.8em 0vw;
+  vertical-align: middle;
+}
+.homePG .footer .home{
+  background:url('../img/home.svg') no-repeat center;
+  background-size: 70% 70%;
+  /* margin-left: 1em; */
+  margin: 1.2em 1vw 0.8em 2.6vw;
+}
+.homePG .footer .favorite{
+  background:url('../img/favorite.svg') no-repeat center;
+  background-size: 70% 70%;
+}
+.homePG .footer .write{
+  background: url('../img/write.svg') no-repeat center;
+  background-size: 140% 100%;
+  /* margin: 0.6em 0.8em 0.8em 1em; */
+  margin: 0.5em 1vw 0.8em 1vw;
+  /* width: 3em; */
+  width: 25.3vw;
+  height: 3.3em;
+}
+.homePG .footer .alram{
+  background: url('../img/alram.svg')no-repeat center;
+  background-size: 70% 70%;
+  width: 14vw;
+}
+.homePG .footer .talk{
+  background:url('../img/talk.svg')no-repeat center;
+  background-size: 70% 70%;
+  margin: 1.2em 1vw 0.8em 1vw;
+  width: 14vw;
+}
